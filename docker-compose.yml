@@ -1,0 +1,28 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: glaucoma_project/Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - GLAUCOMA_DEVICE=cpu
+      - PORT=8000
+    volumes:
+      - ./glaucoma_project/outputs:/app/glaucoma_project/outputs
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  frontend:
+    build:
+      context: ./glaucoma-app
+      dockerfile: Dockerfile
+      args:
+        VITE_API_URL: ""
+    ports:
+      - "5173:80"
+    depends_on:
+      - api

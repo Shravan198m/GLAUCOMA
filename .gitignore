@@ -1,1 +1,12 @@
 node_modules
+venv/
+.venv/
+__pycache__/
+*.pyc
+training_output.log
+glaucoma-app/dist/
+glaucoma-app/flask-api/reports/
+glaucoma-app/flask-api/results/
+.vscode/
+.idea/
+*.log
