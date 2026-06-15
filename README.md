@@ -230,6 +230,9 @@ docker compose up --build
 
 | Change | Details |
 |--------|---------|
+| **Visual Enhancement** | Home page background image (`eye-bg.jpg`) set to 40% opacity with blend-multiply overlay for high clarity and readability. |
+| **Grid & Spacing Fixes** | Removed redundant flex-1 rules from Upload page columns, restoring proper 55%/45% layout constraints. |
+| **Single-page Layout** | Adjusted container margins and dropzone constraints on `/upload` to fit entirely on a single screen without scrollbars. |
 | **Canonical FastAPI backend** | Single backend in `glaucoma_project/src/api.py` |
 | **Flask removed** | `glaucoma-app/flask-api/` deprecated — no duplicate server |
 | **Frontend integrated** | React app connects directly to FastAPI on port 8000 |
