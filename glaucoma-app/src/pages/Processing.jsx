@@ -88,13 +88,13 @@ export default function Processing() {
   const progressPercent = Math.round((activeIdx / (PROCESSING_STAGES.length - 1)) * 100);
 
   return (
-    <div className="max-w-4xl mx-auto px-6 py-8 text-[#0a2540] flex flex-col justify-center flex-1">
+    <div className="max-w-4xl mx-auto px-6 py-8 text-[#0a2540] flex flex-col justify-center flex-1 overflow-y-auto lg:overflow-visible">
       <div className="text-center mb-6">
         <h1 className="text-2xl font-extrabold tracking-tight text-[#0a2540]">Clinical Processing Pipeline</h1>
         <p className="text-xs text-slate-500 mt-1">Analyzing fundus image via hybrid computer vision & deep learning...</p>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-6 items-stretch">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
         
         {/* ==========================================
             LEFT COLUMN — SCANNER & VISUALIZATION
@@ -166,7 +166,7 @@ export default function Processing() {
             </span>
           </div>
 
-          <div className="flex-1 space-y-1.5 overflow-hidden flex flex-col justify-center max-h-[260px]">
+          <div className="flex-1 space-y-1.5 flex flex-col justify-center md:max-h-[260px] md:overflow-hidden py-2">
             {PROCESSING_STAGES.map((stage, i) => {
               const done = i < activeIdx;
               const active = i === activeIdx;

@@ -18,7 +18,7 @@ import { useScrollSpy } from "../hooks/useScrollSpy";
 
 function Callout({ children }) {
   return (
-    <div className="rounded-xl bg-slate-50 border-l-4 border-[#00C2FF] p-5 text-sm text-slate-600 leading-relaxed shadow-md">
+    <div className="rounded-xl bg-slate-50 border-l-4 border-[#00C2FF] p-4 sm:p-5 text-xs sm:text-sm text-slate-600 leading-relaxed shadow-md">
       {children}
     </div>
   );
@@ -59,7 +59,7 @@ function AccordionStep({ step, index }) {
                 { label: "Output Data", val: step.output },
                 { label: "Clinical Algorithm", val: step.algorithm }
               ].map((item) => (
-                <div key={item.label} className="grid sm:grid-cols-[140px_1fr] gap-2 bg-white border border-slate-100 p-3.5 rounded-xl">
+                <div key={item.label} className="grid grid-cols-1 sm:grid-cols-[140px_1fr] gap-2 bg-white border border-slate-100 p-3.5 rounded-xl">
                   <span className="font-extrabold uppercase tracking-wider text-[#00C2FF]">{item.label}</span>
                   <span className="text-[#0a2540] leading-relaxed">{item.val}</span>
                 </div>
@@ -72,6 +72,7 @@ function AccordionStep({ step, index }) {
   );
 }
 
+
 export default function About() {
   const sectionIds = DOC_SECTIONS.map((s) => s.id);
   const active = useScrollSpy(sectionIds);
@@ -81,12 +82,36 @@ export default function About() {
   };
 
   return (
-    <div className="max-w-6xl mx-auto px-6 py-10 sm:py-16 text-[#0a2540] min-h-screen">
+    <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-16 text-[#0a2540] min-h-screen">
       <div className="mb-12 border-b border-slate-100 pb-8">
         <h1 className="text-3xl font-extrabold tracking-tight text-[#0a2540]">System Documentation</h1>
         <p className="text-sm text-slate-500 mt-2 max-w-2xl leading-relaxed">
           Technical specifications, model performance details, and mathematical methodology of the hybrid Glaucoma Detection pipeline (MITE ISE 2025–26).
         </p>
+      </div>
+
+      {/* Mobile quick-nav dropdown */}
+      <div className="lg:hidden mb-8">
+        <label htmlFor="mobile-doc-nav" className="block text-xs font-extrabold uppercase tracking-wider text-slate-500 mb-2">
+          Jump to Section
+        </label>
+        <div className="relative">
+          <select
+            id="mobile-doc-nav"
+            value={active || ""}
+            onChange={(e) => scrollTo(e.target.value)}
+            className="w-full bg-white border border-slate-200 rounded-xl px-4 py-3 text-sm text-[#0a2540] font-semibold focus:outline-none focus:border-[#00C2FF] focus:ring-1 focus:ring-[#00C2FF] appearance-none shadow-sm cursor-pointer"
+          >
+            {DOC_SECTIONS.map(({ id, label }) => (
+              <option key={id} value={id}>
+                {label}
+              </option>
+            ))}
+          </select>
+          <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-slate-500">
+            <ChevronDown className="w-4 h-4" />
+          </div>
+        </div>
       </div>
 
       <div className="grid lg:grid-cols-[240px_1fr] gap-10">
@@ -325,22 +350,24 @@ export default function About() {
 
             <h3 className="text-sm font-bold text-[#0a2540] mt-8 mb-3">CDR Clinical Classification Thresholds</h3>
             <div className="hospital-card overflow-hidden">
-              <table className="w-full text-xs">
-                <thead>
-                  <tr className="bg-slate-50 text-slate-500 text-[10px] font-extrabold uppercase border-b border-slate-100">
-                    <th className="px-5 py-3 text-left">CDR Range</th>
-                    <th className="px-5 py-3 text-left">Interpretation & Referral Instructions</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {CDR_TABLE.map(([range, interp]) => (
-                    <tr key={range} className="border-b border-slate-100 last:border-0 hover:bg-slate-50/50 transition-colors">
-                      <td className="px-5 py-3.5 font-bold font-mono-data text-[#0a2540]">{range}</td>
-                      <td className="px-5 py-3.5 text-slate-600 leading-relaxed">{interp}</td>
+              <div className="overflow-x-auto w-full">
+                <table className="w-full min-w-[500px] text-xs">
+                  <thead>
+                    <tr className="bg-slate-50 text-slate-500 text-[10px] font-extrabold uppercase border-b border-slate-100">
+                      <th className="px-5 py-3 text-left">CDR Range</th>
+                      <th className="px-5 py-3 text-left">Interpretation & Referral Instructions</th>
                     </tr>
-                  ))}
-                </tbody>
-              </table>
+                  </thead>
+                  <tbody>
+                    {CDR_TABLE.map(([range, interp]) => (
+                      <tr key={range} className="border-b border-slate-100 last:border-0 hover:bg-slate-50/50 transition-colors">
+                        <td className="px-5 py-3.5 font-bold font-mono-data text-[#0a2540]">{range}</td>
+                        <td className="px-5 py-3.5 text-slate-600 leading-relaxed">{interp}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
             </div>
           </section>
 

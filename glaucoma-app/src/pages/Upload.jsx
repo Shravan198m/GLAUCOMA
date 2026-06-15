@@ -62,25 +62,25 @@ export default function Upload() {
 
 
   return (
-    <div className="max-w-6xl w-full mx-auto px-6 py-4 lg:py-6 text-[#0a2540] flex-1 flex flex-col min-h-0">
+    <div className="max-w-6xl w-full mx-auto px-6 py-4 lg:py-6 text-[#0a2540] flex-1 flex flex-col min-h-0 overflow-y-auto lg:overflow-visible">
       <div className="mb-4 lg:mb-6">
         <h1 className="text-2xl lg:text-3xl font-extrabold tracking-tight text-[#0a2540]">Image Analysis</h1>
         <p className="text-xs lg:text-sm text-slate-500 mt-0.5">Upload fundus images to run the automated glaucoma screening pipeline.</p>
       </div>
 
-      <div className="grid lg:grid-cols-[55%_45%] gap-6 lg:gap-8 min-h-0 flex-1">
+      <div className="grid grid-cols-1 lg:grid-cols-[55%_45%] gap-6 lg:gap-8 min-h-0 flex-1">
         {/* ==========================================
             LEFT COLUMN — UPLOAD AREA
             ========================================== */}
         <motion.div 
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
-          className="space-y-3 lg:space-y-4 flex flex-col min-h-0"
+          className="col-span-1 space-y-3 lg:space-y-4 flex flex-col min-h-0"
         >
           {/* Patient Details Input */}
           <div className="hospital-card p-4 lg:p-5">
             <h2 className="text-xs lg:text-sm font-bold uppercase tracking-wider text-[#00C2FF] mb-3">Patient Information</h2>
-            <div className="grid grid-cols-3 gap-3">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
               {[
                 { key: "name", label: "Patient Name", ph: "Optional" },
                 { key: "age", label: "Age", ph: "Years" },
@@ -184,12 +184,12 @@ export default function Upload() {
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.15 }}
-          className="space-y-3 lg:space-y-4 flex flex-col min-h-0"
+          className="col-span-1 space-y-3 lg:space-y-4 flex flex-col min-h-0"
         >
           {/* Features Card */}
           <div className="hospital-card p-4 lg:p-5 flex-1 flex flex-col min-h-0">
             <h2 className="text-xs lg:text-sm font-bold uppercase tracking-wider text-[#00C2FF] mb-3">Pipeline Integration Features</h2>
-            <ul className="space-y-2 lg:space-y-2.5 overflow-y-auto pr-1 flex-1">
+            <ul className="space-y-2 lg:space-y-2.5 lg:overflow-y-auto pr-1 flex-1">
               {[
                 { title: "Enhanced K-Strange Segmentation", desc: "Deterministic anchor-based clustering maps disc & cup borders." },
                 { title: "Cup-to-Disc Ratio Computation", desc: "Calculates metric-aligned vertical CDR indicators Suspected (>0.6)." },

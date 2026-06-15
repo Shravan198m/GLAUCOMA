@@ -275,7 +275,7 @@ export default function Results() {
         {/* ==========================================
             GRID ROW 2 — KPI MEASUREMENTS
             ========================================== */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {[
             {
               label: "Cup-to-Disc Ratio (CDR)",
@@ -324,7 +324,7 @@ export default function Results() {
             <Activity size={14} className="text-[#00C2FF]" />
             Pipeline Visual Transformations
           </h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {[
               { label: "1. Original Fundus", src: originalSrc },
               { label: "2. Preprocessed", src: preprocessedSrc },
