@@ -1,8 +1,8 @@
 services:
   api:
     build:
-      context: .
-      dockerfile: glaucoma_project/Dockerfile
+      context: ./glaucoma_project
+      dockerfile: Dockerfile
     ports:
       - "8000:8000"
     environment:
