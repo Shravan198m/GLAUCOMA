@@ -1,8 +1,8 @@
 services:
   api:
     build:
-      context: ./glaucoma_project
-      dockerfile: Dockerfile
+      context: .
+      dockerfile: glaucoma_project/Dockerfile
     ports:
       - "8000:8000"
     environment:
@@ -18,8 +18,8 @@ services:
 
   frontend:
     build:
-      context: ./glaucoma-app
-      dockerfile: Dockerfile
+      context: .
+      dockerfile: glaucoma-app/Dockerfile
       args:
         VITE_API_URL: ""
     ports:
