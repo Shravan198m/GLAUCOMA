@@ -1,4 +1,9 @@
-const API_BASE = import.meta.env.VITE_API_URL || 
+let rawApiUrl = import.meta.env.VITE_API_URL || "";
+if (rawApiUrl.includes("railway.app") || (rawApiUrl && !rawApiUrl.startsWith("http"))) {
+  rawApiUrl = "";
+}
+
+const API_BASE = rawApiUrl || 
   (typeof window !== "undefined" && window.location.hostname.includes("vercel.app") 
     ? "https://svmoodlu-glaucoma-backend.hf.space" 
     : "");
