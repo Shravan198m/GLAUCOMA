@@ -1,6 +1,30 @@
 {
   "rewrites": [
     {
+      "source": "/health",
+      "destination": "https://svmoodlu-glaucoma-backend.hf.space/health"
+    },
+    {
+      "source": "/predict",
+      "destination": "https://svmoodlu-glaucoma-backend.hf.space/predict"
+    },
+    {
+      "source": "/results/:id",
+      "destination": "https://svmoodlu-glaucoma-backend.hf.space/results/:id"
+    },
+    {
+      "source": "/reports/:path*",
+      "destination": "https://svmoodlu-glaucoma-backend.hf.space/reports/:path*"
+    },
+    {
+      "source": "/eval/:filename*",
+      "destination": "https://svmoodlu-glaucoma-backend.hf.space/eval/:filename*"
+    },
+    {
+      "source": "/training/:filename*",
+      "destination": "https://svmoodlu-glaucoma-backend.hf.space/training/:filename*"
+    },
+    {
       "source": "/(.*)",
       "destination": "/index.html"
     }
