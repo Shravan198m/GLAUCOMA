@@ -131,7 +131,7 @@ export default function Processing() {
             <p className="text-sm font-semibold text-slate-600 leading-relaxed">
               {isValidationError 
                 ? error.replace("Invalid image: ", "") 
-                : "An unexpected error occurred during the analysis pipeline. Please check your network connection and try again."}
+                : `Error: ${error}`}
             </p>
           </div>
 
