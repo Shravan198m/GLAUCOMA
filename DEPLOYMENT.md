@@ -41,7 +41,7 @@ Docker Compose is the easiest way to deploy the application in production. It pa
 ### Steps to Deploy
 1. **Navigate to project root**:
    ```bash
-   cd GLUCOMA
+   cd GLAUCOMA
    ```
 2. **Verify Model Weights**: Ensure your PyTorch model weights are placed inside `glaucoma_project/outputs/models/best_model.pth`.
 3. **Build and Start Container Services**:
@@ -106,8 +106,8 @@ To run FastAPI persistently on Windows, you can use **NSSM (Non-Sucking Service 
    nssm install GlaucomaAPI
    ```
 3. In the GUI popup, configure the following:
-   * **Path**: `C:\path\to\GLUCOMA\glaucoma_project\venv\Scripts\python.exe`
-   * **Startup directory**: `C:\path\to\GLUCOMA\glaucoma_project`
+   * **Path**: `C:\path\to\GLAUCOMA\glaucoma_project\venv\Scripts\python.exe`
+   * **Startup directory**: `C:\path\to\GLAUCOMA\glaucoma_project`
    * **Arguments**: `-m uvicorn src.api:app --host 127.0.0.1 --port 8000 --workers 4`
 4. Click **Install service** and start it via the Services manager (`services.msc`).
 
@@ -121,7 +121,7 @@ To run FastAPI persistently on Windows, you can use **NSSM (Non-Sucking Service 
 
        # Path to frontend compiled static files
        location / {
-           root C:/path/to/GLUCOMA/glaucoma-app/dist;
+           root C:/path/to/GLAUCOMA/glaucoma-app/dist;
            index index.html;
            try_files $uri $uri/ /index.html;
        }

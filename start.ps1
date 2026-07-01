@@ -12,7 +12,7 @@ if ($PSScriptRoot) {
 } else {
     Write-Host "ERROR: Could not find project root." -ForegroundColor Red
     Write-Host ""
-    Write-Host "Run one of these from the GLUCOMA folder:" -ForegroundColor Yellow
+    Write-Host "Run one of these from the GLAUCOMA folder:" -ForegroundColor Yellow
     Write-Host "  .\START_PROJECT.ps1" -ForegroundColor Cyan
     Write-Host "  .\start.bat" -ForegroundColor Cyan
     Write-Host "  powershell -ExecutionPolicy Bypass -File START_PROJECT.ps1" -ForegroundColor Cyan

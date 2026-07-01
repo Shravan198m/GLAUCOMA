@@ -1,15 +1,15 @@
 # Fixing Windows Long Path Issue for Glaucoma Project
 
 ## 📍 Current Location
-You are in: `C:\Users\svmoo\OneDrive\Documents\GLUCOMA`
+You are in: `C:\Users\svmoo\OneDrive\Documents\GLAUCOMA`
 
-The helper scripts are in: `C:\Users\svmoo\OneDrive\Documents\GLUCOMA\glaucoma_project\`
+The helper scripts are in: `C:\Users\svmoo\OneDrive\Documents\GLAUCOMA\glaucoma_project\`
 
 ## 🚨 The Problem
 When running `pip install -r requirements.txt`, you got this error:
 ```
 ERROR: Could not install packages due to an OSError: [Errno 2] No such file or directory: 
-'C:\\Users\\svmoo\\OneDrive\\Documents\\GLUCOMA\\glaucoma_project\\venv\\share\\jupyter\\labextensions\\@jupyter-widgets\\jupyterlab-manager\\static\\vendors-node_modules_d3-color_src_color_js-node_modules_d3-format_src_defaultLocale_js-node_m-09b215.2643c43f22ad111f4f82.js.map'
+'C:\\Users\\svmoo\\OneDrive\\Documents\\GLAUCOMA\\glaucoma_project\\venv\\share\\jupyter\\labextensions\\@jupyter-widgets\\jupyterlab-manager\\static\\vendors-node_modules_d3-color_src_color_js-node_modules_d3-format_src_defaultLocale_js-node_m-09b215.2643c43f22ad111f4f82.js.map'
 ```
 
 This is a **Windows Long Path limitation** (default max 260 characters).
@@ -80,7 +80,7 @@ This automates all the steps above.
 3. The batch files you see in the IDE:
    - `fix_long_paths.bat` - Helps enable Long Paths
    - `reinstall_deps.bat` - Automates clean reinstall
-4. If you cannot enable Long Paths, move project to `C:\GLUCOMA\` as workaround
+4. If you cannot enable Long Paths, move project to `C:\GLAUCOMA\` as workaround
 
 ## 🔧 Manual Verification
 To manually check if Long Paths are enabled:
@@ -91,7 +91,7 @@ To manually check if Long Paths are enabled:
 ## ❓ Still Having Issues?
 1. Double-check you restarted after enabling Long Paths
 2. Ensure you ran the fix script **as administrator**
-3. Try moving to shorter path: `mkdir C:\GLUCOMA` and copy project there
+3. Try moving to shorter path: `mkdir C:\GLAUCOMA` and copy project there
 4. Temporarily disable antivirus during install if it interferes
 
 ---

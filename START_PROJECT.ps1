@@ -5,7 +5,7 @@
 #  Run from anywhere:
 #    powershell -ExecutionPolicy Bypass -File START_PROJECT.ps1
 #
-#  Or from the GLUCOMA folder:
+#  Or from the GLAUCOMA folder:
 #    .\START_PROJECT.ps1
 #
 #  Or double-click:  start.bat
@@ -21,7 +21,7 @@ if ($PSScriptRoot) {
     $Root = Split-Path -Parent $MyInvocation.MyCommand.Path
 } else {
     Write-Host "ERROR: Run this as a file, not by pasting into the terminal." -ForegroundColor Red
-    Write-Host "  cd C:\Users\svmoo\OneDrive\Documents\GLUCOMA" -ForegroundColor Yellow
+    Write-Host "  cd C:\Users\svmoo\OneDrive\Documents\GLAUCOMA" -ForegroundColor Yellow
     Write-Host "  powershell -ExecutionPolicy Bypass -File START_PROJECT.ps1" -ForegroundColor Yellow
     exit 1
 }

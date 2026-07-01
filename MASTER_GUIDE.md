@@ -4,7 +4,7 @@
 
 | | |
 |---|---|
-| **Project root** | `GLUCOMA/` |
+| **Project root** | `GLAUCOMA/` |
 | **Last updated** | June 12, 2026 |
 | **Status** | Full-stack — frontend + FastAPI + AI + PDF |
 
@@ -34,7 +34,7 @@
 ### Fastest way — one command
 
 ```powershell
-cd GLUCOMA
+cd GLAUCOMA
 .\start.ps1
 ```
 
@@ -74,7 +74,7 @@ cd ..
 ## 2. Complete Folder Map
 
 ```
-GLUCOMA/                                    ← PROJECT ROOT
+GLAUCOMA/                                    ← PROJECT ROOT
 │
 ├── README.md                               ← Main project overview
 ├── MASTER_GUIDE.md                         ← THIS FILE (everything in one place)
@@ -177,13 +177,13 @@ GLUCOMA/                                    ← PROJECT ROOT
 
 | File | Location | What it covers |
 |------|----------|----------------|
-| **MASTER_GUIDE.md** | `GLUCOMA/` | This file — complete project map |
-| **README.md** | `GLUCOMA/` | Main overview, quick start, architecture |
-| **ARCHITECTURE.md** | `GLUCOMA/` | System diagrams, API flow, schema |
-| **DEPLOYMENT.md** | `GLUCOMA/` | Production build, Docker, env vars |
-| **TEST_REPORT.md** | `GLUCOMA/` | Integration test results |
-| **AUDIT_REPORT.md** | `GLUCOMA/` | Full project audit & connection status |
-| **README_LONG_PATHS.md** | `GLUCOMA/` | Windows long-path workarounds |
+| **MASTER_GUIDE.md** | `GLAUCOMA/` | This file — complete project map |
+| **README.md** | `GLAUCOMA/` | Main overview, quick start, architecture |
+| **ARCHITECTURE.md** | `GLAUCOMA/` | System diagrams, API flow, schema |
+| **DEPLOYMENT.md** | `GLAUCOMA/` | Production build, Docker, env vars |
+| **TEST_REPORT.md** | `GLAUCOMA/` | Integration test results |
+| **AUDIT_REPORT.md** | `GLAUCOMA/` | Full project audit & connection status |
+| **README_LONG_PATHS.md** | `GLAUCOMA/` | Windows long-path workarounds |
 | **README.md** | `glaucoma_project/` | ML pipeline, training, model metrics |
 | **API_INSTRUCTIONS.md** | `glaucoma_project/` | FastAPI endpoints, curl examples |
 | **SETUP_GUIDE.md** | `glaucoma_project/` | Python environment setup |
@@ -197,8 +197,8 @@ GLUCOMA/                                    ← PROJECT ROOT
 
 | Script | Location | What it does |
 |--------|----------|--------------|
-| **start.ps1** | `GLUCOMA/` | ★ Start API + frontend + open browser |
-| **start.bat** | `GLUCOMA/` | ★ Double-click wrapper for start.ps1 |
+| **start.ps1** | `GLAUCOMA/` | ★ Start API + frontend + open browser |
+| **start.bat** | `GLAUCOMA/` | ★ Double-click wrapper for start.ps1 |
 | **run_api.bat** | `glaucoma_project/` | Start FastAPI only (port 8000) |
 | **run_api.ps1** | `glaucoma_project/` | Same as above (PowerShell) |
 | **run_training.bat** | `glaucoma_project/` | Train the ResNet-50 model |

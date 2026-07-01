@@ -8,7 +8,7 @@ React UI for the canonical FastAPI backend in `../glaucoma_project/src/api.py`.
 
 ### One command (recommended)
 
-From the **`GLUCOMA`** repo root:
+From the **`GLAUCOMA`** repo root:
 
 ```powershell
 .\start.ps1

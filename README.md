@@ -18,7 +18,7 @@ Upload a fundus photograph → AI analyzes optic disc/cup → returns glaucoma p
 
 ## Quick Start (One Command)
 
-From the **`GLUCOMA`** folder root:
+From the **`GLAUCOMA`** folder root:
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File START_PROJECT.ps1
@@ -92,7 +92,7 @@ No separate Flask server — the old `glaucoma-app/flask-api/` wrapper has been 
 ## Repository Layout
 
 ```
-GLUCOMA/
+GLAUCOMA/
 ├── start.ps1 / start.bat       ← One-click launcher (API + frontend)
 ├── README.md                   ← This file
 ├── ARCHITECTURE.md             ← Detailed architecture diagram
