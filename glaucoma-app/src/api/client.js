@@ -1,4 +1,7 @@
-const API_BASE = import.meta.env.VITE_API_URL || "";
+const API_BASE = import.meta.env.VITE_API_URL || 
+  (typeof window !== "undefined" && window.location.hostname.includes("vercel.app") 
+    ? "https://svmoodlu-glaucoma-backend.hf.space" 
+    : "");
 
 export async function checkHealth() {
   const res = await fetch(`${API_BASE}/health`);
