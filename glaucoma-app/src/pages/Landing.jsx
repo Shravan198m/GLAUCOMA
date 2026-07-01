@@ -119,7 +119,7 @@ export default function Landing() {
                   { label: "Accuracy", value: "89.28%", desc: "Validation Score" },
                   { label: "AUC Score", value: "0.961", desc: "ROC Predict" },
                   { label: "Datasets", value: "4", desc: "Public Sources" },
-                  { label: "Images Used", value: "3,456", desc: "Retinal Database" },
+                  { label: "Images Used", value: "9,005", desc: "Retinal Database" },
                   { label: "Inference", value: "< 3 sec", desc: "Processing Time" },
                 ].map((stat, i) => (
                   <div key={i} className="hospital-card p-2.5 flex flex-col justify-center items-center text-center bg-white">
